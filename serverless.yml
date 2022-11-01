@@ -1,0 +1,21 @@
+service: auctions-serverless
+frameworkVersion: '2'
+
+plugins:
+  - serverless-bundle
+  - serverless-pseudo-parameters
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  memorySize: 256
+  stage: ${opt:stage, 'dev'} #reference variable opt:stage to get the stage ('dev' is the default value)
+  region: us-east-1
+
+functions:
+  hello:
+    handler: src/handlers/hello.handler
+    events:
+      - http:
+          method: GET
+          path: /hello
