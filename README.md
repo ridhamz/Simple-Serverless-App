@@ -1,1 +1,1 @@
-# Compare-Yourself-Serverless-App
+# Auctions-Serverless-App
