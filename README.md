@@ -1,1 +1,1 @@
-# Auctions-Serverless-App
+# Simple-Serverless-App
